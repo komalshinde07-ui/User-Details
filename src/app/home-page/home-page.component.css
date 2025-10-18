@@ -1,0 +1,170 @@
+/* Headers */
+/* .mat-mdc-header-cell {
+  background-color: violet !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+
+
+.mat-mdc-row:nth-child(even) {
+    background-color: #fb1111 !important;
+    color: black !important;
+}
+
+.mat-mdc-row:nth-child(odd) {
+    background-color: white !important; 
+    color: black !important;
+} */
+
+/* Center table on the page */
+
+/* Page background */
+.page-container {
+  background-color: #b3c2df; /* Light gray background */
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  color: #1E3A8A; /* Dark Blue */
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.table-container {
+  /* max-width: 900px; */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Table header style */
+.mat-mdc-header-cell {
+  background-color: #1E3A8A !important;
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Alternate row colors */
+.mat-mdc-row:nth-child(odd) {
+  background-color: #ffffff !important;
+}
+
+.mat-mdc-row:nth-child(even) {
+  background-color: #F3F4F6 !important;
+}
+
+/* Hover effect */
+.mat-mdc-row:hover {
+  background-color: #DBEAFE !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cell text styling */
+.mat-mdc-cell {
+  color: #111827 !important;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+/* Paginator styling */
+.mat-mdc-paginator {
+  margin-top: 20px;
+}
+
+.mat-mdc-paginator .mat-mdc-paginator-range-label,
+.mat-mdc-paginator .mat-mdc-button {
+  color: #1E3A8A !important;
+  font-weight: 500;
+}
+
+.mat-mdc-paginator .mat-mdc-button:hover {
+  background-color: #DBEAFE !important;
+}
+/* Space between buttons */
+.mat-mdc-cell .btn-edit,
+.mat-mdc-cell .btn-delete {
+  margin-right: 8px; /* Space between buttons */
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  min-width: 80px;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+.addbutton{
+  background-color: red;
+
+}
+/* .btn-Add:hover {
+  background: linear-gradient(90deg, #d71132);
+} */
+/* Modify/Edit button - Blue gradient */
+.btn-edit {
+  background-color: #1976d2;  /* base color */
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn-edit:hover {
+  background-color: #125ca1;  /* darker blue */
+}
+
+/* Delete button - Red gradient */
+.btn-delete {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+  color: white;
+}
+
+.btn-delete:hover {
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+/* Icons styling */
+.icon-edit,
+.icon-delete {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 12px; /* space between icons */
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* Edit icon - blue */
+.icon-edit {
+  color: #60d660;
+}
+
+.icon-edit:hover {
+  color: #17a427;
+  transform: scale(1.2);
+}
+
+/* Delete icon - red */
+.icon-delete {
+  color: #ef4444;
+}
+
+.icon-delete:hover {
+  color: #dc2626;
+  transform: scale(1.2);
+}
+.custom-width-dialog .mat-mdc-dialog-surface {
+  width: 80vw !important;   /* 80% of the viewport width */
+  max-width: 1000px;        /* optional max width */
+  height: auto;
+  /* border-radius: 12px; */
+}

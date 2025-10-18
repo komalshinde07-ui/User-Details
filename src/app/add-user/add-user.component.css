@@ -1,0 +1,53 @@
+.dialog-header {
+  display: flex;
+  justify-content: center;  /* Centers the content horizontally */
+  align-items: center;      /* Centers vertically */
+  padding: 16px 24px;
+  background-color:#1E3A8A;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;       /* To keep close button absolute if needed */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.dialog-header button {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+.dialog-body {
+  padding: 32px 48px;
+  background: #f9fafc;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+button[mat-flat-button] {
+  background-color: #1E3A8A;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+button[mat-flat-button]:hover {
+  background-color: #125ca1;
+}
+
+button[mat-stroked-button] {
+  color: #1976d2;
+  border-color: #1976d2;
+  border-radius: 8px;
+}

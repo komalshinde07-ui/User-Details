@@ -1,0 +1,53 @@
+<div class="page-container">
+  <h1 class="page-title">User Details</h1>
+
+  <div class="table-container">
+     <button mat-button style="background-color: rgb(229, 115, 115); " (click)="openAddUserDialog()" >Add user</button><br><br>
+    <table mat-table [dataSource]="dataSource" class="mat-mdc-table">
+
+      <!-- Sequential number (display only) -->
+      <ng-container matColumnDef="sr">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+      </ng-container>
+
+      <!-- ID column removed from display; internal id is kept in the data model -->
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <!-- Role Column -->
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef> Role </th>
+        <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+      </ng-container>
+ <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+       <td mat-cell *matCellDef="let element">
+    <!-- <button mat-button color="primary" (click)="onEdit(element)">Modify</button>
+    <button mat-button color="warn" (click)="onDelete(element)">Delete</button> -->
+     <!-- <button mat-button class="btn-edit" >
+      </button> -->
+  <span  class="icon-edit material-icons" matTooltip="Modify" 
+      matTooltipPosition="above" (click)="onEdit(element)">edit</span>
+    <!-- <button mat-button  class="btn-delete">Delete</button> -->
+  <span  class="icon-delete material-icons" matTooltip="Delete" 
+  matTooltipPosition="above" (click)="onDelete(element)">delete</span>
+  </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

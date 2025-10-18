@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* styles.css */
+.responsive-dialog .mat-mdc-dialog-surface {
+  width: 55vw !important;
+  max-width: 55vw !important;
+  height: 90vh !important;
+
+}
+
+/* @media (max-width: 800px) {
+  .responsive-dialog .mat-mdc-dialog-surface {
+    width: 100vw;
+  }
+} */
