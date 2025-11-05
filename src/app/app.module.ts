@@ -15,12 +15,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AddUserComponent } from './add-user/add-user.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
+
+
 
 
 @NgModule({
@@ -28,9 +34,12 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     HomePageComponent,
     AddUserComponent,
+    LoginComponent,
+    RegisterComponent,
     // ModifyUserComponent removed (file not present)
   ],
   imports: [
+      
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
@@ -50,7 +59,9 @@ MatIconModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule, 
+    HttpClientModule,
+ FormsModule
    
     
 

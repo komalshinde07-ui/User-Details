@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AddUserComponent } from '../add-user/add-user.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ApiService } from '../services/api.service';
 
 
 export interface User {
@@ -36,7 +37,15 @@ export class HomePageComponent {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private dialog: MatDialog) {}
+  users: any;
+  constructor(private apiService: ApiService,private dialog: MatDialog) {}
+
+    ngOnInit() {
+    this.apiService.getEmployees().subscribe((data) => {
+      this.users = data;
+      console.log('Users:', data);
+    });
+  }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
